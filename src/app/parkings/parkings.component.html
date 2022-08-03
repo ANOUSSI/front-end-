@@ -1,0 +1,7 @@
+
+<mat-card *ngFor=" let parking of parkings" class="parking-card">
+    <span style="font-weight:bold">parking {{parking.nom}}</span> <span style="float:right ;" [ngStyle]="calcul(parking)">{{parking.status}}</span ><br>
+
+<span *ngIf="parking.status  !=='Donnees non Disponibles'">nombre de place disponible:{{parking.nbrePlaceDispo}}</span>
+
+</mat-card>
